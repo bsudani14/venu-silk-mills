@@ -91,6 +91,12 @@ public class Splash_Screen extends Activity {
 
     public boolean checkPermissions() {
         try {
+            // On Android 11+ (API 30+), storage permissions are not needed (scoped storage)
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+                proceedToNextScreen();
+                return true;
+            }
+
             String[] permissions = {
                     Manifest.permission.WRITE_EXTERNAL_STORAGE,
                     Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -100,23 +106,7 @@ public class Splash_Screen extends Activity {
                     == PackageManager.PERMISSION_GRANTED) {
                 if (ContextCompat.checkSelfPermission(Splash_Screen.this, permissions[1])
                         == PackageManager.PERMISSION_GRANTED) {
-                    //
-
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            if ("T".equals(dbname)) {
-                                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                                startActivity(i);
-                            } else {
-                                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-                                startActivity(i);
-                            }
-                            finish();
-                        }
-                    }, SPLASH_TIME_OUT);
-
-
+                    proceedToNextScreen();
                 }else{
                     ActivityCompat.requestPermissions(Splash_Screen.this,new String[]{permissions[1]}, 1);
                 }
@@ -128,13 +118,35 @@ public class Splash_Screen extends Activity {
         }
         return isGranted;
     }
+
+    private void proceedToNextScreen() {
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if ("T".equals(dbname)) {
+                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(i);
+                } else {
+                    Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(i);
+                }
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode == 1){
             if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 checkPermissions();
             }else{
-                util_u.showToast("Please Accept Premissions");
+                // Permission denied - proceed anyway on newer Android
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+                    proceedToNextScreen();
+                } else {
+                    util_u.showToast("Please Accept Premissions");
+                }
             }
         }
     }
