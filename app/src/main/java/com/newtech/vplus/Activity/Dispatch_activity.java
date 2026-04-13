@@ -428,9 +428,8 @@ public class Dispatch_activity extends AppCompatActivity {
 
                 boxno.setVisibility(View.VISIBLE);
                 boxno.requestFocus();
-                switch (view.getId()) {
-
-                    case R.id.rackno:
+                int id = view.getId();
+                if (id == R.id.rackno) {
                         mode = 2;
 
                         final int MY_CAMERA_REQUEST_CODE = 100;
@@ -447,7 +446,6 @@ public class Dispatch_activity extends AppCompatActivity {
                             integrator.setBarcodeImageEnabled(true);
                             integrator.initiateScan();
                         }
-                        break;
                 }
             }
         });
@@ -457,8 +455,8 @@ public class Dispatch_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                switch (view.getId()) {
-                    case R.id.btn:
+                int id = view.getId();
+                if (id == R.id.btn) {
                         mode = 1;
 
                         cd1.setVisibility(View.GONE);
@@ -490,7 +488,6 @@ public class Dispatch_activity extends AppCompatActivity {
                             integrator.setBarcodeImageEnabled(true);
                             integrator.initiateScan();
                         }
-                        break;
                 }
 
             }
@@ -831,15 +828,13 @@ public class Dispatch_activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                switch (view.getId()) {
-
-                    case R.id.addbtn:
+                int id = view.getId();
+                if (id == R.id.addbtn) {
 
                         mode = 3;
 
                         Intent intent = new Intent(getApplicationContext(), qrscan_activity.class);
                         startActivity(intent);
-                        break;
                 }
             }
         });

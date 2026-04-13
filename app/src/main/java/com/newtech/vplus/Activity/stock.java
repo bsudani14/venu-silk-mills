@@ -150,9 +150,8 @@ public class stock extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-                switch (view.getId()) {
-
-                    case R.id.sc:
+                int id = view.getId();
+                if (id == R.id.sc) {
                         mode = 1;
 
                         final int MY_CAMERA_REQUEST_CODE = 100;
@@ -169,7 +168,6 @@ public class stock extends AppCompatActivity  {
                     integrator.setBarcodeImageEnabled(true);
                     integrator.initiateScan();
                 }
-                        break;
                 }
             }
         });
@@ -178,9 +176,8 @@ public class stock extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-                switch (view.getId()) {
-
-                    case R.id.sc1:
+                int id = view.getId();
+                if (id == R.id.sc1) {
                         mode = 2;
                         handler =new Handler();
                         handler.postDelayed(runnable =new Runnable() {
@@ -204,7 +201,6 @@ public class stock extends AppCompatActivity  {
                                 handler.postDelayed(runnable, 3000);
                             }
                         },3000);
-                break;
             }
             }
         });
