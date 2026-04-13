@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:text="Welcome To Vplus."
+            android:text="Welcome To Venu Silk Mills."
             android:textColor="#757575"
             android:textSize="16dp" />
     </LinearLayout>
