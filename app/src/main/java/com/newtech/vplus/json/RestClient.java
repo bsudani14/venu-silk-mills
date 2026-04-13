@@ -19,7 +19,7 @@ public class RestClient {
     }
 
     String Myurl = "";
-    private String shorturl = "http://www.newtechinfosol.co.in/";
+    private String shorturl = com.newtech.vplus.BuildConfig.API_BASE_URL;
 
     public RestClient(String url) {
         this.Myurl = shorturl + url;

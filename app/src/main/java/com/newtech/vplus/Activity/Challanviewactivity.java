@@ -15,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.R;
 
 import java.io.BufferedInputStream;
@@ -45,8 +46,8 @@ public class Challanviewactivity extends Activity {
         chalno = intent.getStringExtra("chno");
         chalno1 = intent.getStringExtra("chno");
         chalno1=chalno1.replace("/","-");
-        new showpdf().execute("http://43.228.126.198:83/Challanview/Viewbill?Itemname="+chalno.trim());
-        new DownloadFile().execute("http://43.228.126.198:83/Challanview/Viewbill?Itemname="+chalno.trim(),chalno1+".pdf");
+        new showpdf().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/Challanview/Viewbill?Itemname="+chalno.trim());
+        new DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/Challanview/Viewbill?Itemname="+chalno.trim(),chalno1+".pdf");
         shared.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

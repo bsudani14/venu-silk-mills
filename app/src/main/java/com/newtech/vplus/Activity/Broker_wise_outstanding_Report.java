@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.R;
 
 import java.io.BufferedInputStream;
@@ -27,7 +28,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class Broker_wise_outstanding_Report extends AppCompatActivity {
+public class
+
+Broker_wise_outstanding_Report extends AppCompatActivity {
 
     PDFView pdfView;
     Toolbar mToolbar;
@@ -56,8 +59,8 @@ public class Broker_wise_outstanding_Report extends AppCompatActivity {
         khatacode = b.getString("kcode");
         brcode = b.getString("brcode");
         tdate=new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Calendar.getInstance().getTime());
-        new showpdf().execute("http://43.228.126.198:83/RptSaleout/Viewsaleout?todate="+tdate+"&type=" + khataname + "&brcode=" + brcode);
-        new DownloadFile().execute("http://43.228.126.198:83/RptSaleout/Viewsaleout?todate="+tdate+"&type=" + khataname + "&brcode=" + brcode, brcode + ".pdf");
+        new showpdf().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/RptSaleout/Viewsaleout?todate="+tdate+"&type=" + khataname + "&brcode=" + brcode);
+        new DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/RptSaleout/Viewsaleout?todate="+tdate+"&type=" + khataname + "&brcode=" + brcode, brcode + ".pdf");
 
         imgshared.setOnClickListener(new View.OnClickListener() {
             @Override

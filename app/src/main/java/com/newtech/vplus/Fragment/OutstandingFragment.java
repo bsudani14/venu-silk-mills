@@ -25,6 +25,7 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 import com.newtech.vplus.Activity.FileDownloader;
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.Database.Database_Helper;
 import com.newtech.vplus.R;
 import com.newtech.vplus.util.Util_u;
@@ -75,7 +76,7 @@ public class OutstandingFragment  extends Fragment {
 
         pcode = getArguments().getString("pcodetab");
 
-        PDFurl = "http://43.228.126.198:99/outstandingreport/outstandingrpt?pcode="+pcode;
+        PDFurl = "http://" + BuildConfig.REPORT_SERVER_IP + ":99/outstandingreport/outstandingrpt?pcode="+pcode;
 
         Mainurl = "http://docs.google.com/gview?embedded=true&url=" + PDFurl;
 
@@ -113,8 +114,8 @@ public class OutstandingFragment  extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_shared) {
-            // http://43.228.126.198:99/outstandingreport/outstandingrpt?pcode=2137
-            new DownloadFile().execute("http://43.228.126.198:99/outstandingreport/outstandingrpt?pcode="+pcode,pcode+".pdf");
+            // http://SERVER_IP:99/outstandingreport/outstandingrpt?pcode=2137
+            new DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":99/outstandingreport/outstandingrpt?pcode="+pcode,pcode+".pdf");
             final Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override

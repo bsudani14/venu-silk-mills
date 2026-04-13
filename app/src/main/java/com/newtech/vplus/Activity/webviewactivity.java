@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.R;
 
 import java.io.BufferedInputStream;
@@ -38,8 +39,8 @@ public class webviewactivity extends AppCompatActivity {
         b = new Bundle();
         b = getIntent().getExtras();
         SALCODE=b.getString("salcode");
-        new webviewactivity.showpdf().execute("http://43.228.126.198:83/Salebill/Viewbill?Itemname="+SALCODE+"&type=0");
-        new webviewactivity.DownloadFile().execute("http://43.228.126.198:83/Salebill/Viewbill?Itemname="+SALCODE+"&type=0",SALCODE+".pdf");
+        new webviewactivity.showpdf().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/Salebill/Viewbill?Itemname="+SALCODE+"&type=0");
+        new webviewactivity.DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/Salebill/Viewbill?Itemname="+SALCODE+"&type=0",SALCODE+".pdf");
 
     }
 
@@ -143,7 +144,7 @@ public class webviewactivity extends AppCompatActivity {
 
         String myPdfUrl = null;
 
-            myPdfUrl = "http://43.228.126.198:82/Salebill/Viewbill?Itemname="+SALCODE+"&type=0";
+            myPdfUrl = "http://SERVER_IP:82/Salebill/Viewbill?Itemname="+SALCODE+"&type=0";
         myPdfUrl=myPdfUrl.replace("&","%26");
         String url = "http://docs.google.com/gview?embedded=true&url=" + myPdfUrl;
         webview.loadUrl(url);

@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.Database.Database_Helper;
 import com.newtech.vplus.R;
 
@@ -75,7 +76,7 @@ public class SalbillReport_Activity extends AppCompatActivity {
         });
 
         shared=(ImageView)findViewById(R.id.shared);
-        new DownloadFile().execute("http://43.228.126.198:99/SalebillReport/Viewsalebill?tcode="+salcode,salcode1+".pdf");
+        new DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":99/SalebillReport/Viewsalebill?tcode="+salcode,salcode1+".pdf");
         shared.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,8 +111,8 @@ public class SalbillReport_Activity extends AppCompatActivity {
         lineProgressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         getdata();
-        //new DownloadFile().execute("http://43.228.126.198:88/Salebill/viewbill?Salcode="+salcode, "S"+salcode1 + ".pdf");
-        new DownloadFile().execute("http://43.228.126.198:99/SalebillReport/Viewsalebill?tcode="+salcode,salcode1+".pdf");
+        //new DownloadFile().execute("http://SERVER_IP:88/Salebill/viewbill?Salcode="+salcode, "S"+salcode1 + ".pdf");
+        new DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":99/SalebillReport/Viewsalebill?tcode="+salcode,salcode1+".pdf");
 
     }
 
@@ -138,8 +139,8 @@ public class SalbillReport_Activity extends AppCompatActivity {
         }
     }
     public void getdata() {
-        PDFurl = "http://43.228.126.198:99/SalebillReport/Viewsalebill?";
-        //PDFurl = "http%3A%2F%2F45.58.47.57%3A83%2FStockreport%2FViewStock%3Fkhcode%3D" + khcode + "%26frdate%3D" + fromto[0] + "%26todate%3D" + fromto[1] + "%26";
+        PDFurl = "http://" + BuildConfig.REPORT_SERVER_IP + ":99/SalebillReport/Viewsalebill?";
+        //PDFurl = "http%3A%2F%2FSERVER_IP%3A83%2FStockreport%2FViewStock%3Fkhcode%3D" + khcode + "%26frdate%3D" + fromto[0] + "%26todate%3D" + fromto[1] + "%26";
         // THIS PDF URL ENCODE HTML THEN SHOW/
         try {
             PDFurl = PDFurl + "" + URLEncoder.encode("tcode=" + salcode, "UTF-8");

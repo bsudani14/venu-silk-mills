@@ -42,6 +42,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.newtech.vplus.Activity.FileDownloader;
 import com.newtech.vplus.Activity.SalbillReport_Activity;
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.Activity.webviewactivity;
 import com.newtech.vplus.Adapter.billadpeter;
 import com.newtech.vplus.Database.Database_Helper;
@@ -183,7 +184,7 @@ public class Frbillfragment extends Fragment implements billadpeter.OnClickC {
         }
         else if(TYPE.equals("SHARED")){
             //salcode=salcode.replace("/","a");
-            new DownloadFile().execute("http://43.228.126.198:99/SalebillReport/Viewsalebill?tcode="+billno,billno+ ".pdf");
+            new DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":99/SalebillReport/Viewsalebill?tcode="+billno,billno+ ".pdf");
             File outputFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), billno + ".pdf");
             Uri uri = Uri.fromFile(outputFile);
             if (uri.equals("")) {
@@ -209,8 +210,8 @@ public class Frbillfragment extends Fragment implements billadpeter.OnClickC {
 
         //sal_code =ph.GetVal("Select salcode From partyemail");
 /*
-		new DownloadFile().execute("http://43.228.126.198:99/SalebillReport/Viewsalebill?tcode="+billno,billno+".pdf");
-		//new DownloadFile().execute("http://43.228.126.198:99/SalebillReport/Viewsalebill?tcode="+sal_code,sal_code+".pdf");
+		new DownloadFile().execute("http://SERVER_IP:99/SalebillReport/Viewsalebill?tcode="+billno,billno+".pdf");
+		//new DownloadFile().execute("http://SERVER_IP:99/SalebillReport/Viewsalebill?tcode="+sal_code,sal_code+".pdf");
 		final Handler handler = new Handler();
 		handler.postDelayed(new Runnable() {
 			@Override

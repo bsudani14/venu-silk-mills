@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     NavigationView navigationView;
     String FTYPE, cusname;
-    DrawerLayout drawer;
+    DrawerLayout
+            drawer;
     Database_Helper ph;
     SQLiteDatabase db;
     TextView tx1, tx2;

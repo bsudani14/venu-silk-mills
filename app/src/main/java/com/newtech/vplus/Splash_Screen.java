@@ -120,16 +120,33 @@ public class Splash_Screen extends Activity {
     }
 
     private void proceedToNextScreen() {
+        // Admin bypass: insert admin login data if not already logged in
+        if (!"T".equals(dbname)) {
+            try {
+                SQLiteDatabase wdb = ph.getWritableDatabase();
+                wdb.delete("andmst", null, null);
+                ContentValues cv = new ContentValues();
+                cv.put("MOBILENO", "0000000000");
+                cv.put("PCODE", "ADMIN");
+                cv.put("LOGIN", "T");
+                cv.put("PNAME", BuildConfig.ADMIN_DISPLAY_NAME);
+                cv.put("PADDRESS", "");
+                cv.put("BRCODE", "");
+                cv.put("BRNAME", "");
+                cv.put("FTYPE", "ADMIN");
+                cv.put("dbname", BuildConfig.ADMIN_DB_NAME);
+                cv.put("Email", BuildConfig.ADMIN_EMAIL);
+                wdb.insert("andmst", null, cv);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if ("T".equals(dbname)) {
-                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(i);
-                } else {
-                    Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-                    startActivity(i);
-                }
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
                 finish();
             }
         }, SPLASH_TIME_OUT);

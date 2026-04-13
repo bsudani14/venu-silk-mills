@@ -55,9 +55,9 @@ public class Otpverify extends AppCompatActivity {
     ApiInterface apiService;
     Database_Helper ph;
     SQLiteDatabase db;
-    public String mSubject="Vplus OTP";
+    public String mSubject="OTP Verification";
     public EditText mMessage;
-    String TextFileURL = "http://www.newtechinfosol.co.in/staticip/OTPMAILANDROID.TXT";
+    String TextFileURL = BuildConfig.OTP_CONFIG_URL;
     URL url;
     BufferedReader bufferReader;
     TextView tryagain;
@@ -281,7 +281,7 @@ public class Otpverify extends AppCompatActivity {
                 for (i=0; i < numberOfLines; i++) {
                     //TextHolder3 = bufferReader.readLine();
                     //numberOfLines++;
-                    // moral1-moralenterprise@gmail.com
+                    // email comment removed for security
                     TextHolder3 = bufferReader.readLine( );
                     if (TextHolder3 == null) break;
                     String res = TextHolder3.length() >= 6 ? TextHolder3.substring(0, 6) : "";

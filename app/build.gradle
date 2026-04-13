@@ -1,5 +1,12 @@
 apply plugin: 'com.android.application'
 
+// Load secrets from secrets.properties (not committed to git)
+def secretsFile = rootProject.file("secrets.properties")
+def secrets = new Properties()
+if (secretsFile.exists()) {
+    secrets.load(new FileInputStream(secretsFile))
+}
+
 android {
     namespace "com.newtech.vplus"
     compileSdk 34
@@ -11,6 +18,15 @@ android {
         versionCode 3
         versionName "1.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Inject secrets as BuildConfig fields
+        buildConfigField "String", "API_BASE_URL", "\"${secrets.getProperty('API_BASE_URL', 'http://localhost/')}\""
+        buildConfigField "String", "OTP_CONFIG_URL", "\"${secrets.getProperty('OTP_CONFIG_URL', 'http://localhost/otp.txt')}\""
+        buildConfigField "String", "REPORT_SERVER_IP", "\"${secrets.getProperty('REPORT_SERVER_IP', '0.0.0.0')}\""
+        buildConfigField "String", "ADMIN_DB_NAME", "\"${secrets.getProperty('ADMIN_DB_NAME', 'default')}\""
+        buildConfigField "String", "ADMIN_DISPLAY_NAME", "\"${secrets.getProperty('ADMIN_DISPLAY_NAME', 'Admin')}\""
+        buildConfigField "String", "ADMIN_EMAIL", "\"${secrets.getProperty('ADMIN_EMAIL', 'admin@example.com')}\""
+        buildConfigField "String", "SMTP_HOST", "\"${secrets.getProperty('SMTP_HOST', 'smtp.gmail.com')}\""
     }
     buildTypes {
          release {

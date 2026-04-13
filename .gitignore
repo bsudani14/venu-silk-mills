@@ -9,3 +9,6 @@
 .externalNativeBuild
 hs_err_pid*.log
 replay_pid*.log
+
+# Secrets - NEVER commit
+secrets.properties

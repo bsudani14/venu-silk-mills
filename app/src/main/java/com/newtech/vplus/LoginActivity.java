@@ -51,15 +51,14 @@ public class LoginActivity extends AppCompatActivity {
     String Email,mb;
     static Database_Helper ph;
     SQLiteDatabase db;
-    public String mSubject="Vplus OTP";
+    public String mSubject="App OTP";
     public EditText mMessage;
     ConnectionDetector cd;
     Boolean isInternetPresent = false;
     String resultarray, otpnoarray, pcodearray, paddress, pname, brcode, brname, ftype, plocat;
     ProgressBar pro1;
     WebView webview;
-    String TextFileURL = "http://www.newtechinfosol.co.in/staticip/OTPMAILANDROID.TXT";
-    //String TextFileURL = "http://www.newtechinfosol.co.in/OMS/API/SDAPPIPCONFIG";
+    String TextFileURL = BuildConfig.OTP_CONFIG_URL;
     URL url;
     BufferedReader bufferReader;
     TextView textView;
@@ -226,7 +225,7 @@ public class LoginActivity extends AppCompatActivity {
                 for (i=0; i < numberOfLines; i++) {
                     //TextHolder3 = bufferReader.readLine();
                     //numberOfLines++;
-                    // moral1-moralenterprise@gmail.com
+                    // email comment removed for security
                     TextHolder3 = bufferReader.readLine( );
                     if (TextHolder3 == null) break;
                     String res = TextHolder3.length() >= 6 ? TextHolder3.substring(0, 6) : "";

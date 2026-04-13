@@ -31,6 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.R;
 import com.newtech.vplus.Database.Database_Helper;
 import com.newtech.vplus.json.RestClient;
@@ -201,7 +202,7 @@ public class CrystalActivity extends AppCompatActivity {
 
                // PDFurl = PDFurl+""+"todate="+fromto[1]+"&fromdate="+fromto[0];
 
-                //PDFurl = "http%3A%2F%2F45.58.47.57%3A83%2FStockreport%2FViewStock%3Fkhcode%3D" + khcode + "%26frdate%3D" + fromto[0] + "%26todate%3D" + fromto[1] + "%26";
+                //PDFurl = "http%3A%2F%2FSERVER_IP%3A83%2FStockreport%2FViewStock%3Fkhcode%3D" + khcode + "%26frdate%3D" + fromto[0] + "%26todate%3D" + fromto[1] + "%26";
                 // THIS PDF URL ENCODE HTML THEN SHOW/
 
                 //new showpdf().execute(PDFurl);
@@ -413,7 +414,7 @@ public class CrystalActivity extends AppCompatActivity {
                                 }
                             }
 
-                            PDFurl = "http://43.228.126.198:83/RptSaleReg/Viewsalereg?";
+                            PDFurl = "http://" + BuildConfig.REPORT_SERVER_IP + ":83/RptSaleReg/Viewsalereg?";
                             PDFurl = PDFurl+""+"frdate="+fromto[0]+"&todate="+fromto[1]+"&khcode="+khatacode;
                            // PDFurl = PDFurl+""+"todate="+fromto[1]+"&fromdate="+fromto[0];
                             new showpdf().execute(PDFurl);

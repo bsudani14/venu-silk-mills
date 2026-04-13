@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.newtech.vplus.BuildConfig;
 import com.newtech.vplus.R;
 
 import java.io.BufferedInputStream;
@@ -36,8 +37,8 @@ public class Reportviewactivity extends Activity {
         Intent intent = getIntent();
         iNAME = intent.getStringExtra("iname");
         costcenter = intent.getStringExtra("cost");
-        new showpdf().execute("http://43.228.126.198:83/Stock_Report_show/Viewreportstock?Itemname=" + iNAME.trim() + "&type=" + costcenter);
-        new DownloadFile().execute("http://43.228.126.198:83/Stock_Report_show/Viewreportstock?Itemname=" + iNAME.trim() + "&type=" + costcenter, iNAME + ".pdf");
+        new showpdf().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/Stock_Report_show/Viewreportstock?Itemname=" + iNAME.trim() + "&type=" + costcenter);
+        new DownloadFile().execute("http://" + BuildConfig.REPORT_SERVER_IP + ":83/Stock_Report_show/Viewreportstock?Itemname=" + iNAME.trim() + "&type=" + costcenter, iNAME + ".pdf");
     }
 
 
