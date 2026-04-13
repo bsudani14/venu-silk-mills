@@ -8,10 +8,10 @@ if (secretsFile.exists()) {
 }
 
 android {
-    namespace "com.newtech.vplus"
+    namespace "com.venusilkmills.app"
     compileSdk 34
     defaultConfig {
-        applicationId "com.newtech.vplus"
+        applicationId "com.venusilkmills.app"
         minSdk 21
         targetSdk 34
         multiDexEnabled true

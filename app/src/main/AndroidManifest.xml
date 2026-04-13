@@ -20,7 +20,7 @@
 
     <application
 
-        android:name="com.newtech.vplus.util.OverRideFont_util"
+        android:name="com.venusilkmills.app.util.OverRideFont_util"
         android:allowBackup="true"
         android:icon="@drawable/vplus"
         android:label="@string/app_name"
@@ -35,9 +35,10 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="com.newtech.vplus.MainActivity"
+            android:name="com.venusilkmills.app.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
+            android:label=
+                "@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -46,7 +47,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.newtech.vplus.Splash_Screen"
+            android:name="com.venusilkmills.app.Splash_Screen"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -56,53 +57,53 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.newtech.vplus.LoginActivity"
+            android:name="com.venusilkmills.app.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Otpverify"
+            android:name="com.venusilkmills.app.Otpverify"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.Reportviewactivity"
+            android:name="com.venusilkmills.app.Activity.Reportviewactivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.OrderList"
+            android:name="com.venusilkmills.app.Activity.OrderList"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.newpcodedetails"
+            android:name="com.venusilkmills.app.Activity.newpcodedetails"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.ordermenu"
+            android:name="com.venusilkmills.app.Activity.ordermenu"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.newtech.vplus.Fragment.Apartylist"
+            android:name="com.venusilkmills.app.Fragment.Apartylist"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.newtech.vplus.Activity.orderdetails"
+            android:name="com.venusilkmills.app.Activity.orderdetails"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.newtech.vplus.Activity.webviewactivity"
+            android:name="com.venusilkmills.app.Activity.webviewactivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.Dispatch_preview"
+            android:name="com.venusilkmills.app.Activity.Dispatch_preview"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.Challanviewactivity"
+            android:name="com.venusilkmills.app.Activity.Challanviewactivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.millprocessparty"
+            android:name="com.venusilkmills.app.Activity.millprocessparty"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.millprocessactivity"
+            android:name="com.venusilkmills.app.Activity.millprocessactivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.newtech.vplus.Activity.CrystalActivity"
+            android:name="com.venusilkmills.app.Activity.CrystalActivity"
             android:screenOrientation="portrait" />
 
         <receiver
-            android:name="com.newtech.vplus.FCM.GcmBroadcastReceiver"
+            android:name="com.venusilkmills.app.FCM.GcmBroadcastReceiver"
             android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
@@ -113,25 +114,25 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.newtech.vplus.FCM.GcmIntentService"
+        <service android:name="com.venusilkmills.app.FCM.GcmIntentService"
             android:exported="false" />
-        <activity android:name="com.newtech.vplus.FCM.notification" />
-        <activity android:name="com.newtech.vplus.Activity.Broker_List_activity" />
-        <activity android:name="com.newtech.vplus.Activity.Broker_wise_outstanding_Report"></activity>
+        <activity android:name="com.venusilkmills.app.FCM.notification" />
+        <activity android:name="com.venusilkmills.app.Activity.Broker_List_activity" />
+        <activity android:name="com.venusilkmills.app.Activity.Broker_wise_outstanding_Report"></activity>
 
-        <activity android:name="com.newtech.vplus.Activity.CreOutstanding"
+        <activity android:name="com.venusilkmills.app.Activity.CreOutstanding"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name="com.newtech.vplus.Activity.Dispatch_activity"
+        <activity android:name="com.venusilkmills.app.Activity.Dispatch_activity"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name="com.newtech.vplus.Activity.CaptureActivityPortrait"
+        <activity android:name="com.venusilkmills.app.Activity.CaptureActivityPortrait"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name="com.newtech.vplus.Activity.stock"
+        <activity android:name="com.venusilkmills.app.Activity.stock"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name="com.newtech.vplus.Activity.qrscan_activity"
+        <activity android:name="com.venusilkmills.app.Activity.qrscan_activity"
             android:screenOrientation="portrait"></activity>
     </application>
 
