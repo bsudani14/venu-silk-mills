@@ -93,22 +93,17 @@ app/src/main/java/com/venusilkmills/app/
 
 ## API Endpoints
 
-The app communicates with a REST API backend. Key endpoints include:
+The app communicates with a REST API backend (configured via `secrets.properties`). Key features include:
 
-| Endpoint | Purpose |
-|----------|---------|
-| `VPLUS/api/OTP` | Login / OTP generation |
-| `VPLUS/api/otpverify` | OTP verification |
-| `VPLUS/api/pendingorder` | Pending orders list |
-| `VPLUS/api/Dispatch` | Dispatch data |
-| `VPLUS/api/Companylist` | Company list |
-| `VPLUS/api/Khatalist` | Cost center list |
-| `VPLUS/api/BookList` | Book/ledger list |
-| `VPLUS/api/BarcodeScane` | Barcode scan processing |
-| `VPLUS/api/party` | Party data |
-| `VPLUS/api/OpeningBal` | Opening balance |
-| `VPLUS/api/ShadeCardList` | Shade card list |
-| `VPLUS/api/partyorder` | Party order submission |
+| Module | Purpose |
+|--------|---------|
+| OTP | Login / OTP generation & verification |
+| Orders | Pending orders, order scheduling, party orders |
+| Dispatch | Dispatch entries and auto-dispatch |
+| Stock | Barcode scanning and stock management |
+| Ledger | Company list, cost centers, book/ledger data |
+| Reports | Sale bills, outstanding, stock reports (PDF) |
+| Party | Party data, opening balance, address management |
 
 ## Build
 
