@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "99373741966",
+    "firebase_url": "https://aceknits-ca4f5.firebaseio.com",
+    "project_id": "aceknits-ca4f5",
+    "storage_bucket": "aceknits-ca4f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99373741966:android:e862aaa8c3fd1445",
+        "android_client_info": {
+          "package_name": "com.newtech.vplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99373741966-l94p8660sni2ue5023fveq9lovu833ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmKBcnh-IrblClfMCNTZOOHwUGjwdz_4E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

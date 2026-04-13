@@ -1,0 +1,11 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/app/build
+/captures
+.externalNativeBuild
+hs_err_pid*.log
+replay_pid*.log

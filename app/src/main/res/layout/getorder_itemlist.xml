@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/aa"
+    android:layout_weight="2">
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/shadetext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:text="Shade"
+        android:typeface="monospace" />
+    <TextView
+        android:id="@+id/svalue"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textStyle="bold" />
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="1dp"
+        android:layout_height="match_parent">
+
+    </View>
+    <EditText
+        android:id="@+id/edit_order_quant"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:hint="Qty"
+        android:textSize="17dp"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+       >
+    </EditText>
+    <View
+        android:background="@color/colorPrimary"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"></View>
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/pending"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Pending"
+        android:textSize="17dp"
+        />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        />
+    </LinearLayout>
+</LinearLayout>

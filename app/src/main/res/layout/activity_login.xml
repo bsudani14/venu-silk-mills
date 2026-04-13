@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:fillViewport="true">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Login" />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/appbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/networking" />
+
+        <EditText
+            android:id="@+id/mobileotp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/otpedt"
+            android:drawableLeft="@drawable/ic_smartphone"
+            android:ems="12"
+            android:maxLength="10"
+            android:inputType="phone"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+            android:typeface="monospace">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/mailID"
+            android:layout_margin="10dp"
+            android:layout_below="@id/mobileotp"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:background="@drawable/otpedt"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="5dp"
+            android:visibility="gone"
+            android:textColor="@android:color/black"
+            android:layout_height="40dp"
+            android:hint="Email"/>
+        <!-- <EditText
+             android:layout_margin="10dp"
+             android:id="@+id/subjectID"
+             android:layout_below="@+id/mailID"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="Subject"/>-->
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/messageID"
+            android:layout_below="@+id/mailID"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:hint="Message"/>
+
+        <TextView
+            android:id="@+id/orderno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Enter Mobile No"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:typeface="serif" />
+
+
+        <Button
+            android:id="@+id/okotp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/mailID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/otpedt"
+            android:text="Log In"
+            android:textColor="#000000"
+            android:typeface="serif" />
+
+
+        <ProgressBar
+            android:id="@+id/pro1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/okotp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

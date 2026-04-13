@@ -1,0 +1,315 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+             android:id="@+id/tabs"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_below="@+id/appbar"
+             android:background="@color/colorPrimary"
+             app:tabGravity="fill"
+            android:visibility="gone"
+             app:tabTextColor="@color/colord9"
+             app:tabSelectedTextColor="@android:color/white"
+             app:tabMaxWidth="0dp"
+             app:tabMode="fixed" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/lin0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/shade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@color/colorf2"
+            android:focusable="false"
+            android:hint="SHADE SELECTION"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/sed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@color/colorf2"
+            android:focusable="false"
+            android:hint="ITEM LIST"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/otpedt"
+            android:gravity="center"
+            android:text="Delivery Add"
+            android:textColor="@color/colorPrimaryDark">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/deliveryaddress1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="0.5"
+
+            android:background="@drawable/otpedt"
+            android:drawSelectorOnTop="true"
+            android:gravity="center">
+            <!-- android:entries="@array/spvalue"-->
+
+        </Spinner>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@color/colorf2"
+            android:hint="SEARCH"
+            android:padding="5dp" />
+        <Button
+            android:id="@+id/startDictation"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_keyboard_voice_black_24dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"
+            android:onClick="onClick"
+            android:layout_weight="1"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorf2"
+            android:focusable="false"
+            android:hint="ITEM LIST"
+            android:padding="5dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/lin2"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <TextView
+            android:textSize="17dp"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:text="SHADE"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="RtlCompat">
+
+        </TextView>
+        <View
+            android:background="@color/White"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content">
+
+        </View>
+        <TextView
+            android:textSize="17dp"
+
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="QUANTITY"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            tools:ignore="RtlCompat">
+
+        </TextView>
+        <View
+            android:background="@color/White"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"></View>
+        <TextView
+            android:textSize="17dp"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:text="PENDING"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="RtlCompat">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/order_itemlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:visibility="gone" />
+</LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:weightSum="3">
+        <Button
+            android:id="@+id/save_order"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </Button>
+
+    <EditText
+
+        android:textAlignment="center"
+        android:id="@+id/tot_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:focusable="false">
+
+    </EditText>
+  <!--  <EditText
+
+        android:textAlignment="center"
+        android:id="@+id/tot_quantity1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:focusable="false">
+
+    </EditText>
+    <EditText
+
+        android:textAlignment="center"
+        android:id="@+id/tot_quantity2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:focusable="false">
+
+    </EditText>-->
+
+
+    <Button
+            android:id="@+id/clear_order"
+            android:text="CLEAR"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </Button>
+</LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

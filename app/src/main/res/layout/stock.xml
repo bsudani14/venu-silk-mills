@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="STOCK"
+                            android:textStyle="bold"
+                            android:textColor="@color/White"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:id="@+id/totcar"
+                            android:layout_weight="1.5"
+                            android:textSize="20dp"
+                            android:visibility="visible"
+                            android:layout_gravity="bottom"
+                            android:textStyle="bold"
+                            android:textColor="@color/White"
+                            android:hint="T.Cartton"
+                            android:gravity="center"
+                            ></TextView>
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/compselection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorf2"
+                    android:focusable="false"
+                    android:hint="COMPANY SELECTION"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/bookselection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorf2"
+                    android:focusable="false"
+                    android:layout_weight="1"
+                    android:hint="BOOK SELECTION"
+                    android:padding="5dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorf2"
+                android:drawablePadding="5dp"
+                android:ems="17"
+                android:entries="@array/Type1"
+                android:hint="Type"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#C0C0C0"
+                android:typeface="serif">
+
+            </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorf2"
+                android:hint="Rack No"
+                android:paddingLeft="5dp"
+                android:id="@+id/Rackno"
+                android:singleLine="true"
+                android:layout_weight="1">
+
+              </EditText >
+
+            <ImageView
+                android:id="@+id/sc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_add"
+                android:tint="@color/White" />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/carttonno1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:background="@color/colorf2"
+                android:hint="Cartton No(Using Machine)"
+                android:paddingLeft="5dp" >
+
+
+            </EditText>
+
+
+
+
+        </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_weight="2"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/carttonno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:focusable="false"
+
+                android:singleLine="true"
+                android:background="@color/colorf2"
+                android:hint="Cartton No(Manually Scan)"
+                android:paddingLeft="5dp" >
+
+
+            </EditText>
+
+            <ImageView
+                android:id="@+id/sc1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_add"
+                android:tint="@color/White" />
+
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_scan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/menu_group_1">
+        <item
+            android:id="@+id/menu_home"
+            android:checkable="true"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+       <!-- <group android:id="@+id/menu_group_3">
+            <item
+                android:id="@+id/SHOP1"
+                android:title="Shop by Category" />
+
+            <item
+                android:id="@+id/menu_order"
+                android:title="Order Entry" />
+
+            <item
+                android:id="@+id/menu_order_job"
+                android:title="Job Order Entry" />
+        </group>-->
+
+        <!--  <item
+              android:id="@+id/menu_out"
+              android:icon="@drawable/ic_outstanding"
+              android:checkable="true"
+              android:title="Outstanding" />-->
+
+        <item
+            android:id="@+id/menu_dispatch"
+            android:checkable="true"
+            android:icon="@drawable/ic_process"
+            android:title="DISPATCH" />
+
+         <item
+            android:id="@+id/menu_led1"
+            android:checkable="true"
+            android:icon="@drawable/ic_ledger"
+            android:title="Ledger/Bill" />
+
+     <item
+            android:id="@+id/menu_order"
+            android:checkable="true"
+            android:icon="@drawable/ic_ordlist"
+            android:title="Order" />
+        <item
+            android:id="@+id/stock"
+            android:checkable="true"
+            android:icon="@drawable/ic_outstanding"
+            android:title="Stock" />
+        <item
+            android:id="@+id/menu_dis"
+            android:checkable="true"
+            android:icon="@drawable/ic_outstanding"
+            android:title="Dispatch List" />
+
+      <!--<item
+            android:id="@+id/menu_ordlist"
+            android:checkable="true"
+            android:icon="@drawable/ic_ordlist"
+            android:title="Order List" />-->
+
+
+        <!-- <item
+             android:id="@+id/menu_Bout"
+             android:checkable="true"
+             android:icon="@drawable/ic_ledger"
+             android:title="BrokerWise Outstanding" />
+
+         <item
+             android:id="@+id/menu_creout"
+             android:checkable="true"
+             android:icon="@drawable/ic_ledger"
+             android:title="Creditor Outstanding" />
+
+         <item
+             android:id="@+id/menu_orderapprove"
+             android:checkable="true"
+             android:icon="@drawable/ic_orderapprovel"
+             android:title="Order Approval" />
+
+
+
+         <item
+              android:id="@+id/menu_salrep"
+              android:icon="@drawable/ic_salereport"
+              android:checkable="true"
+              android:title="Sale Report" />
+
+         <item
+             android:id="@+id/menu_report1"
+             android:checkable="true"
+             android:icon="@drawable/ic_chart"
+             android:title="Stock Report" />
+         <item
+             android:id="@+id/menu_millprocess"
+             android:checkable="true"
+             android:icon="@drawable/ic_report"
+             android:title="Mill Process Report" />
+
+
+         <item
+             android:id="@+id/menu_notification"
+             android:checkable="true"
+             android:icon="@drawable/ic_notifications"
+             android:title="Notification List" />&ndash;&gt;
+
+     -->
+       <!-- <item
+            android:id="@+id/menu_permission"
+            android:checkable="true"
+            android:icon="@drawable/ic_process"
+            android:title="Permission" />-->
+        <item
+            android:id="@+id/menu_logout"
+            android:checkable="true"
+            android:icon="@drawable/ic_logout"
+            android:title="Log out" />
+    </group>
+
+</menu>
